@@ -12,6 +12,8 @@ components:
           targetPort: 3000
       memoryLimit: 1G
       mountSources: true
+    attributes:
+      controller.devfile.io/merge-contribution: true
 
 commands:
   - id: install-dependencies
