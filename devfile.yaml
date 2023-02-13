@@ -4,13 +4,14 @@ metadata:
 components:
   - name: tools
     container:
-      image: quay.io/devfile/universal-developer-image:ubi8-0e189d9
+      image: quay.io/devfile/universal-developer-image:latest
       endpoints:
         - exposure: public
           name: nodejs
           protocol: http
           targetPort: 3000
-      memoryLimit: 1G
+      memoryLimit: 2Gi
+      memoryRequest: 256Mi
       mountSources: true
     attributes:
       controller.devfile.io/merge-contribution: true
